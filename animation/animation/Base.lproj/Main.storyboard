@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ai6-Ch-o2P">
+                                <rect key="frame" x="142" y="28" width="383" height="30"/>
+                                <state key="normal" title="Play gif"/>
+                                <connections>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BcH-Qt-kml"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjr-CQ-iRp">
+                                <rect key="frame" x="142" y="325" width="383" height="30"/>
+                                <state key="normal" title="Slide in"/>
+                                <connections>
+                                    <action selector="slideIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9TN-0M-aMt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCh-Wy-dUx">
+                                <rect key="frame" x="568" y="325" width="79" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="UOT-6W-JCM"/>
+                                </constraints>
+                                <state key="normal" title="Grow"/>
+                                <connections>
+                                    <action selector="grow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ka-Hf-QEa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdn-rR-98G">
+                                <rect key="frame" x="18" y="325" width="86" height="30"/>
+                                <state key="normal" title="Fade in"/>
+                                <connections>
+                                    <action selector="fadeIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oMe-nf-U8v"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For When you intend to be uncivil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2s-VB-hSA">
+                                <rect key="frame" x="49" y="101" width="569" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame_0_delay-0.1s.gif" translatesAutoresizingMaskIntoConstraints="NO" id="IFB-MY-sgM">
+                                <rect key="frame" x="20" y="11" width="627" height="235"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="235" id="8Of-QC-o2n"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ai6-Ch-o2P" firstAttribute="leading" secondItem="sjr-CQ-iRp" secondAttribute="leading" id="0tz-0P-UQl"/>
+                            <constraint firstItem="sjr-CQ-iRp" firstAttribute="leading" secondItem="vdn-rR-98G" secondAttribute="trailing" constant="38" id="24j-xu-Edn"/>
+                            <constraint firstItem="vdn-rR-98G" firstAttribute="baseline" secondItem="sjr-CQ-iRp" secondAttribute="baseline" id="5bA-el-z2h"/>
+                            <constraint firstItem="IFB-MY-sgM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="76L-9e-Kn4"/>
+                            <constraint firstItem="IFB-MY-sgM" firstAttribute="trailing" secondItem="LCh-Wy-dUx" secondAttribute="trailing" id="Fp7-je-Ika"/>
+                            <constraint firstItem="sjr-CQ-iRp" firstAttribute="baseline" secondItem="LCh-Wy-dUx" secondAttribute="baseline" id="HH0-ie-gO2"/>
+                            <constraint firstItem="m2s-VB-hSA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="29" id="IYG-VM-FfH"/>
+                            <constraint firstAttribute="bottom" secondItem="vdn-rR-98G" secondAttribute="bottom" constant="20" symbolic="YES" id="Jyx-Gx-Nyq"/>
+                            <constraint firstItem="vdn-rR-98G" firstAttribute="top" secondItem="IFB-MY-sgM" secondAttribute="bottom" constant="79" id="RBw-Bo-sZN"/>
+                            <constraint firstItem="ai6-Ch-o2P" firstAttribute="trailing" secondItem="sjr-CQ-iRp" secondAttribute="trailing" id="Vdo-mO-kzE"/>
+                            <constraint firstItem="IFB-MY-sgM" firstAttribute="centerX" secondItem="sjr-CQ-iRp" secondAttribute="centerX" id="fCZ-qK-iNW"/>
+                            <constraint firstItem="m2s-VB-hSA" firstAttribute="top" secondItem="ai6-Ch-o2P" secondAttribute="bottom" constant="43" id="fGZ-h9-rwp"/>
+                            <constraint firstItem="vdn-rR-98G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-2" id="hDw-4H-9cC"/>
+                            <constraint firstItem="ai6-Ch-o2P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="lXG-Pd-B21"/>
+                            <constraint firstItem="LCh-Wy-dUx" firstAttribute="leading" secondItem="sjr-CQ-iRp" secondAttribute="trailing" constant="43" id="o94-gF-uLe"/>
+                            <constraint firstItem="IFB-MY-sgM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="u0R-qp-ZjP"/>
+                            <constraint firstItem="ai6-Ch-o2P" firstAttribute="centerX" secondItem="m2s-VB-hSA" secondAttribute="centerX" id="zk3-Gq-yO8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonText" destination="ai6-Ch-o2P" id="49o-Hp-MdU"/>
+                        <outlet property="image" destination="IFB-MY-sgM" id="ALL-bS-6ZT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="frame_0_delay-0.1s.gif" width="500" height="272"/>
+    </resources>
+</document>
